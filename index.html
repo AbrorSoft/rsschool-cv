@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Abror Anvarov — Frontend Developer | CV</title>
-  <meta name="description" content="Curriculum vitae of Abror Anvarov, frontend developer specialising in HTML, CSS, JavaScript and Angular. Skills, projects, education and contacts.">
+  <meta name="description" content="Curriculum vitae of Abror Anvarov, frontend developer with 2.5+ years of commercial Angular experience in fintech, e-commerce and admin systems. Skills, projects, education and contacts.">
   <meta name="author" content="Abror Anvarov">
   <meta name="theme-color" content="#0d0f0e">
 
@@ -28,8 +28,9 @@
 
     <p class="hero__role" style="--i:4">
       Frontend developer <span class="bullet" aria-hidden="true"></span>
-      HTML <span class="bullet" aria-hidden="true"></span> CSS <span class="bullet" aria-hidden="true"></span> JavaScript
-      <span class="bullet" aria-hidden="true"></span> Angular
+      Angular <span class="bullet" aria-hidden="true"></span> TypeScript
+      <span class="bullet" aria-hidden="true"></span> RxJS
+      <span class="bullet" aria-hidden="true"></span> Fintech
     </p>
 
     <address class="hero__contacts" style="--i:5">
@@ -40,10 +41,12 @@
           <a href="tel:+998332710101">+998 33 271 01 01</a></li>
         <li><span class="contacts__key">GitHub</span>
           <a href="https://github.com/AbrorSoft" target="_blank" rel="noopener noreferrer">github.com/AbrorSoft</a></li>
+        <li><span class="contacts__key">Portfolio</span>
+          <a href="https://abrorsoftware.netlify.app" target="_blank" rel="noopener noreferrer">abrorsoftware.netlify.app</a></li>
         <li><span class="contacts__key">Telegram</span>
           <a href="https://t.me/AbrorSoft" target="_blank" rel="noopener noreferrer">@AbrorSoft</a></li>
         <li><span class="contacts__key">Location</span>
-          <span>Tashkent, Uzbekistan</span></li>
+          <span>Gulabad St. 25, Tashkent, Uzbekistan</span></li>
       </ul>
     </address>
 
@@ -66,16 +69,27 @@
       </div>
       <div class="section__body">
         <p class="lede">
-          I build interfaces that stay fast, readable and accessible after the first release.
+          Frontend developer with 2.5+ years of commercial experience designing and building
+          scalable web applications on Angular.
         </p>
         <p>
-          Self-taught developer with a mobile background who moved into the web. I care about semantic
-          markup, predictable CSS architecture and small, well-named functions. Comfortable reading other
-          people&rsquo;s code, splitting a design into components and shipping incrementally with Git.
+          My strongest ground is fintech and complex administrative systems: interfaces integrated with
+          major commercial banks, dashboards that stay usable when a table holds thousands of rows, and
+          deeply nested reactive forms that still validate predictably. I have also worked with geo
+          services (Yandex Maps API), rich-text editing and real-time content updates, and I regularly
+          profile and optimise interface performance instead of guessing where the cost is.
         </p>
         <p>
-          Currently studying frontend engineering at RS School, practising vanilla JavaScript and Angular
-          on real tasks, and looking for a junior frontend position in a team where code review is a habit.
+          Priorities in work: readable code over clever code, explicit error and empty states, small
+          reviewable pull requests, and honest estimates. I prefer owning a feature end to end — from
+          the Figma file and API contract to the production release and the bug reports that follow.
+        </p>
+        <p>
+          Goals for the next stage: grow from strong middle into senior frontend engineer — deeper
+          application architecture and state management, disciplined unit and e2e testing, measurable
+          performance budgets — and share that with juniors through code review. I am currently
+          strengthening my fundamentals through the RS School frontend course and open to roles where
+          engineering culture and review are taken seriously.
         </p>
       </div>
     </section>
@@ -88,17 +102,13 @@
       <div class="section__body">
         <div class="skills">
           <div class="skills__group">
-            <h3 class="skills__label">Core</h3>
+            <h3 class="skills__label">Languages</h3>
             <ul class="tags">
+              <li>TypeScript</li>
+              <li>JavaScript (ES6+)</li>
               <li>HTML5 &amp; semantics</li>
               <li>CSS3</li>
-              <li>Flexbox</li>
-              <li>CSS Grid</li>
-              <li>Responsive &amp; mobile-first</li>
-              <li>BEM</li>
-              <li>JavaScript (ES6+)</li>
-              <li>TypeScript</li>
-              <li>DOM &amp; events</li>
+              <li>Sass / SCSS</li>
             </ul>
           </div>
           <div class="skills__group">
@@ -106,20 +116,28 @@
             <ul class="tags">
               <li>Angular</li>
               <li>RxJS</li>
-              <li>Sass / SCSS</li>
-              <li>REST API</li>
+              <li>Reactive forms</li>
+              <li>PrimeNG</li>
+              <li>NG-ZORRO</li>
+              <li>Taiga UI</li>
+              <li>Tailwind CSS</li>
+              <li>Bootstrap</li>
             </ul>
           </div>
           <div class="skills__group">
-            <h3 class="skills__label">Tools</h3>
+            <h3 class="skills__label">Tools &amp; methods</h3>
             <ul class="tags">
               <li>Git &amp; GitHub</li>
               <li>GitHub Pages</li>
-              <li>VS Code</li>
-              <li>Chrome DevTools</li>
-              <li>Figma</li>
+              <li>Scrum</li>
+              <li>REST API</li>
+              <li>Yandex Maps API</li>
+              <li>Parcel</li>
               <li>npm</li>
-              <li>Vite</li>
+              <li>Figma</li>
+              <li>Chrome DevTools</li>
+              <li>BEM</li>
+              <li>Responsive &amp; mobile-first</li>
             </ul>
           </div>
         </div>
@@ -129,36 +147,77 @@
     <section class="section" id="code">
       <div class="section__head">
         <span class="section__num" aria-hidden="true">03</span>
-        <h2 class="section__title">Code example</h2>
+        <h2 class="section__title">Code examples</h2>
       </div>
       <div class="section__body">
         <p class="section__note">
-          Task: group a flat list of items by a computed key without mutating the input.
+          1 &mdash; Typeahead search stream: cancel stale requests, ignore duplicate input, never break
+          the stream on a failed request.
         </p>
         <figure class="code">
           <figcaption class="code__bar">
             <span class="code__dot" aria-hidden="true"></span>
-            <span class="code__file">group-by.js</span>
+            <span class="code__file">client-search.service.ts</span>
           </figcaption>
+          <pre class="code__body"><code><span class="c-kw">import</span> { <span class="c-ty">Injectable</span>, <span class="c-fn">inject</span> } <span class="c-kw">from</span> <span class="c-st">'@angular/core'</span>;
+<span class="c-kw">import</span> { <span class="c-ty">HttpClient</span> } <span class="c-kw">from</span> <span class="c-st">'@angular/common/http'</span>;
+<span class="c-kw">import</span> { <span class="c-ty">Observable</span>, <span class="c-fn">of</span> } <span class="c-kw">from</span> <span class="c-st">'rxjs'</span>;
+<span class="c-kw">import</span> { <span class="c-fn">catchError</span>, <span class="c-fn">debounceTime</span>, <span class="c-fn">distinctUntilChanged</span>,
+         <span class="c-fn">map</span>, <span class="c-fn">switchMap</span> } <span class="c-kw">from</span> <span class="c-st">'rxjs/operators'</span>;
 
+<span class="c-kw">export interface</span> <span class="c-ty">Client</span> { <span class="c-va">id</span>: <span class="c-ty">number</span>; <span class="c-va">name</span>: <span class="c-ty">string</span>; <span class="c-va">inn</span>: <span class="c-ty">string</span>; }
+
+<span class="c-fn">@Injectable</span>({ <span class="c-va">providedIn</span>: <span class="c-st">'root'</span> })
+<span class="c-kw">export class</span> <span class="c-ty">ClientSearchService</span> {
+  <span class="c-kw">private readonly</span> <span class="c-va">http</span> <span class="c-op">=</span> <span class="c-fn">inject</span>(<span class="c-ty">HttpClient</span>);
+
+  <span class="c-cm">/** Emits a fresh result list for every meaningful keystroke. */</span>
+  <span class="c-fn">search</span>(<span class="c-va">term$</span>: <span class="c-ty">Observable</span>&lt;<span class="c-ty">string</span>&gt;): <span class="c-ty">Observable</span>&lt;<span class="c-ty">Client</span>[]&gt; {
+    <span class="c-kw">return</span> <span class="c-va">term$</span>.<span class="c-fn">pipe</span>(
+      <span class="c-fn">map</span>((<span class="c-va">term</span>) <span class="c-op">=&gt;</span> <span class="c-va">term</span>.<span class="c-fn">trim</span>()),
+      <span class="c-fn">debounceTime</span>(<span class="c-ty">300</span>),
+      <span class="c-fn">distinctUntilChanged</span>(),
+      <span class="c-fn">switchMap</span>((<span class="c-va">term</span>) <span class="c-op">=&gt;</span>
+        <span class="c-va">term</span>.<span class="c-va">length</span> <span class="c-op">&lt;</span> <span class="c-ty">2</span>
+          <span class="c-op">?</span> <span class="c-fn">of</span>([])
+          <span class="c-op">:</span> <span class="c-kw">this</span>.<span class="c-va">http</span>
+              .<span class="c-fn">get</span>&lt;<span class="c-ty">Client</span>[]&gt;(<span class="c-st">'/api/clients'</span>, { <span class="c-va">params</span>: { <span class="c-va">q</span>: <span class="c-va">term</span> } })
+              .<span class="c-fn">pipe</span>(<span class="c-fn">catchError</span>(() <span class="c-op">=&gt;</span> <span class="c-fn">of</span>([]))),
+      ),
+    );
+  }
+}</code></pre>
+        </figure>
+
+        <p class="section__note">
+          2 &mdash; Grouping helper used in reports: pure, typed, and it never mutates the source array.
+        </p>
+        <figure class="code">
+          <figcaption class="code__bar">
+            <span class="code__dot" aria-hidden="true"></span>
+            <span class="code__file">group-by.ts</span>
+          </figcaption>
           <pre class="code__body"><code><span class="c-cm">// Groups items by the key returned from `selector`.</span>
 <span class="c-cm">// Returns a new Map — the source array is never touched.</span>
-<span class="c-kw">export const</span> <span class="c-fn">groupBy</span> <span class="c-op">=</span> (<span class="c-va">items</span>, <span class="c-va">selector</span>) <span class="c-op">=&gt;</span>
+<span class="c-kw">export const</span> <span class="c-fn">groupBy</span> <span class="c-op">=</span> &lt;<span class="c-ty">T</span>, <span class="c-ty">K</span>&gt;(
+  <span class="c-va">items</span>: <span class="c-kw">readonly</span> <span class="c-ty">T</span>[],
+  <span class="c-va">selector</span>: (<span class="c-va">item</span>: <span class="c-ty">T</span>) <span class="c-op">=&gt;</span> <span class="c-ty">K</span>,
+): <span class="c-ty">Map</span>&lt;<span class="c-ty">K</span>, <span class="c-ty">T</span>[]&gt; <span class="c-op">=&gt;</span>
   <span class="c-va">items</span>.<span class="c-fn">reduce</span>((<span class="c-va">groups</span>, <span class="c-va">item</span>) <span class="c-op">=&gt;</span> {
     <span class="c-kw">const</span> <span class="c-va">key</span> <span class="c-op">=</span> <span class="c-fn">selector</span>(<span class="c-va">item</span>);
     <span class="c-kw">const</span> <span class="c-va">bucket</span> <span class="c-op">=</span> <span class="c-va">groups</span>.<span class="c-fn">get</span>(<span class="c-va">key</span>) <span class="c-op">??</span> [];
 
     <span class="c-kw">return</span> <span class="c-va">groups</span>.<span class="c-fn">set</span>(<span class="c-va">key</span>, [...<span class="c-va">bucket</span>, <span class="c-va">item</span>]);
-  }, <span class="c-kw">new</span> <span class="c-ty">Map</span>());
+  }, <span class="c-kw">new</span> <span class="c-ty">Map</span>&lt;<span class="c-ty">K</span>, <span class="c-ty">T</span>[]&gt;());
 
-<span class="c-kw">const</span> <span class="c-va">tasks</span> <span class="c-op">=</span> [
-  { <span class="c-va">title</span>: <span class="c-st">'CV markup'</span>, <span class="c-va">status</span>: <span class="c-st">'done'</span> },
-  { <span class="c-va">title</span>: <span class="c-st">'Responsive pass'</span>, <span class="c-va">status</span>: <span class="c-st">'done'</span> },
-  { <span class="c-va">title</span>: <span class="c-st">'Deploy to Pages'</span>, <span class="c-va">status</span>: <span class="c-st">'todo'</span> },
+<span class="c-kw">const</span> <span class="c-va">payments</span> <span class="c-op">=</span> [
+  { <span class="c-va">id</span>: <span class="c-ty">1</span>, <span class="c-va">bank</span>: <span class="c-st">'SQB'</span>, <span class="c-va">status</span>: <span class="c-st">'paid'</span> },
+  { <span class="c-va">id</span>: <span class="c-ty">2</span>, <span class="c-va">bank</span>: <span class="c-st">'Hayot Bank'</span>, <span class="c-va">status</span>: <span class="c-st">'pending'</span> },
+  { <span class="c-va">id</span>: <span class="c-ty">3</span>, <span class="c-va">bank</span>: <span class="c-st">'SQB'</span>, <span class="c-va">status</span>: <span class="c-st">'pending'</span> },
 ];
 
-<span class="c-fn">groupBy</span>(<span class="c-va">tasks</span>, (<span class="c-va">task</span>) <span class="c-op">=&gt;</span> <span class="c-va">task</span>.<span class="c-va">status</span>);
-<span class="c-cm">// Map(2) { 'done' =&gt; [ … 2 items ], 'todo' =&gt; [ … 1 item ] }</span></code></pre>
+<span class="c-fn">groupBy</span>(<span class="c-va">payments</span>, (<span class="c-va">payment</span>) <span class="c-op">=&gt;</span> <span class="c-va">payment</span>.<span class="c-va">bank</span>);
+<span class="c-cm">// Map(2) { 'SQB' =&gt; [ … 2 items ], 'Hayot Bank' =&gt; [ … 1 item ] }</span></code></pre>
         </figure>
       </div>
     </section>
@@ -171,26 +230,42 @@
       <div class="section__body">
         <ol class="timeline">
           <li class="entry">
-            <p class="entry__meta"><time datetime="2025">2025</time> &ndash; present</p>
+            <p class="entry__meta"><time datetime="2026-01">Jan 2026</time> &ndash; present</p>
             <div class="entry__main">
-              <h3 class="entry__title">Freelance frontend developer</h3>
-              <p class="entry__org">Self-employed <span class="sep">/</span> remote</p>
+              <h3 class="entry__title">Frontend developer &mdash; FINBOX</h3>
+              <p class="entry__org">Tashkent, Uzbekistan <span class="sep">/</span> accounting &amp; payroll products</p>
               <ul class="entry__points">
-                <li>Built responsive landing pages and small dashboards from Figma files, mobile-first, no layout regressions below 320&nbsp;px.</li>
-                <li>Wired UI to REST endpoints with <code>fetch</code>, handling loading, empty and error states explicitly.</li>
-                <li>Cut repeat CSS by moving colours, spacing and type scale into custom properties.</li>
+                <li><strong>FinWin ecosystem</strong> — dashboard for corporate finance and payroll operations, positioned as a web alternative to 1C. Development and support of the client side.</li>
+                <li><strong>FinWin Operator</strong> — internal operator dashboard for managing the processes of the accounting ecosystem; built from scratch.</li>
+                <li><strong>XisobPlus</strong> — official landing page for the FinWin ecosystem, designed and developed from scratch to attract B2B clients.</li>
               </ul>
             </div>
           </li>
+
           <li class="entry">
-            <p class="entry__meta"><time datetime="2024">2024</time></p>
+            <p class="entry__meta"><time datetime="2024-04">Apr 2024</time> &ndash; <time datetime="2026-01">Jan 2026</time></p>
             <div class="entry__main">
-              <h3 class="entry__title">Selected projects</h3>
-              <p class="entry__org">Open source <span class="sep">/</span> study work</p>
+              <h3 class="entry__title">Frontend developer &mdash; DevOps</h3>
+              <p class="entry__org">Tashkent, Uzbekistan <span class="sep">/</span> fintech, e-commerce, admin systems</p>
               <ul class="entry__points">
-                <li><strong>rsschool-cv</strong> — this page: hand-written semantic HTML and CSS, published on GitHub Pages.</li>
-                <li><strong>Task tracker</strong> — vanilla JS SPA with drag &amp; drop, filters and <code>localStorage</code> persistence.</li>
-                <li><strong>Weather widget</strong> — Angular component consuming a public API, with caching and unit tests.</li>
+                <li><strong>Integrated banking &amp; billing systems</strong> (admin panel) — designed and shipped reliable client interfaces for financial products integrated with major commercial banks: Davr Bank, Trast Bank, Hayot Bank, SQB, Anor Bank.</li>
+                <li><strong>VoltCar</strong> (EV charging infrastructure) — integrated the Yandex Maps API so drivers can find, filter and build routes to the nearest charging stations; optimised custom marker rendering and clustering for smooth panning on mobile and desktop.</li>
+                <li><strong>Maysara</strong> (Tinder-style admin panel) — internal management system for a dating platform with non-trivial moderation logic: profile review queues, interactive approval cards and analytics tables.</li>
+                <li><strong>As-Sodiq</strong> (Q&amp;A platform) — built from scratch: threaded comments, voting, dynamic feed, rich-text editors and real-time content updates.</li>
+                <li><strong>YBX</strong> (unified banking services, admin panel) — client interfaces for financial workflows, development and support.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="entry">
+            <p class="entry__meta">Study &amp; personal</p>
+            <div class="entry__main">
+              <h3 class="entry__title">Educational projects</h3>
+              <p class="entry__org">Public work <span class="sep">/</span> source code available</p>
+              <ul class="entry__points">
+                <li><strong>rsschool-cv</strong> — this page: hand-written semantic HTML and CSS, responsive layout, print styles, deployed with GitHub Pages. <a href="https://github.com/AbrorSoft/rsschool-cv" target="_blank" rel="noopener noreferrer">Source</a>.</li>
+                <li><strong>Portfolio site</strong> — personal site with project write-ups: <a href="https://abrorsoftware.netlify.app" target="_blank" rel="noopener noreferrer">abrorsoftware.netlify.app</a>.</li>
+                <li><strong>Other repositories</strong> — practice tasks in JavaScript, TypeScript and Angular: <a href="https://github.com/AbrorSoft" target="_blank" rel="noopener noreferrer">github.com/AbrorSoft</a>.</li>
               </ul>
             </div>
           </li>
@@ -206,32 +281,43 @@
       <div class="section__body">
         <ol class="timeline">
           <li class="entry">
-            <p class="entry__meta"><time datetime="2025">2025</time> &ndash; present</p>
+            <p class="entry__meta"><time datetime="2024-09">Sep 2024</time> &ndash; <time datetime="2025-05">May 2025</time></p>
             <div class="entry__main">
-              <h3 class="entry__title">RS School — JavaScript / Frontend</h3>
-              <p class="entry__org">The Rolling Scopes <span class="sep">/</span> online</p>
-              <ul class="entry__points">
-                <li>Layout, JavaScript fundamentals, Git workflow, code review and cross-check culture.</li>
-              </ul>
+              <h3 class="entry__title">University of Northampton (UON)</h3>
+              <p class="entry__org">Higher education</p>
             </div>
           </li>
           <li class="entry">
-            <p class="entry__meta"><time datetime="2021">2021</time> &ndash; 2025</p>
+            <p class="entry__meta"><time datetime="2021-10">Oct 2021</time> &ndash; <time datetime="2024-05">May 2024</time></p>
             <div class="entry__main">
-              <h3 class="entry__title">Bachelor&rsquo;s degree, Information Technologies</h3>
+              <h3 class="entry__title">TMC Institute &mdash; Information Technologies</h3>
               <p class="entry__org">Tashkent, Uzbekistan</p>
-              <ul class="entry__points">
-                <li>Algorithms, databases, software engineering foundations.</li>
-              </ul>
             </div>
           </li>
           <li class="entry">
-            <p class="entry__meta">Self-study</p>
+            <p class="entry__meta"><time datetime="2017-09">Sep 2017</time> &ndash; <time datetime="2020-06">Jun 2020</time></p>
             <div class="entry__main">
-              <h3 class="entry__title">Courses &amp; practice</h3>
-              <p class="entry__org">MDN <span class="sep">/</span> freeCodeCamp <span class="sep">/</span> Codewars</p>
+              <h3 class="entry__title">Tashkent College of Tourism</h3>
+              <p class="entry__org">Culinary programme</p>
+            </div>
+          </li>
+          <li class="entry">
+            <p class="entry__meta"><time datetime="2008-09">Sep 2008</time> &ndash; <time datetime="2017-05">May 2017</time></p>
+            <div class="entry__main">
+              <h3 class="entry__title">School No. 236</h3>
+              <p class="entry__org">Tashkent, Uzbekistan</p>
+            </div>
+          </li>
+          <li class="entry">
+            <p class="entry__meta">Courses</p>
+            <div class="entry__main">
+              <h3 class="entry__title">Courses &amp; training</h3>
+              <p class="entry__org">Completed programmes</p>
               <ul class="entry__points">
-                <li>Daily algorithm practice and reading specs instead of only tutorials.</li>
+                <li><strong>RS School</strong> — JavaScript / Frontend course, 2026 (in progress): layout, JavaScript fundamentals, Git workflow, code review and cross-check culture.</li>
+                <li><strong>Angular — The Complete Guide</strong>, Apr 2024.</li>
+                <li><strong>The Complete JavaScript Course: From Zero to Expert</strong>, Jun 2022.</li>
+                <li><strong>PDP Academy</strong> — programming foundations, Feb 2019.</li>
               </ul>
             </div>
           </li>
@@ -258,10 +344,18 @@
             <span class="lang__name">English</span>
             <span class="lang__level">B1 &middot; Intermediate</span>
           </li>
+          <li class="lang">
+            <span class="lang__name">German</span>
+            <span class="lang__level">A1 &middot; Basic</span>
+          </li>
         </ul>
         <p class="section__note">
-          English is good enough to read documentation, follow code review in writing and take part in
-          stand-ups; speaking practice is ongoing.
+          English practice: all my working documentation — Angular, RxJS, MDN, library changelogs — is
+          read in English, and I completed the Udemy JavaScript and Angular courses in English without
+          subtitles. In daily work I write commit messages, pull request descriptions and code review
+          comments in English, and at RS School I follow tasks and cross-check feedback in English.
+          Reading and writing are confident; speaking is my current growth area and I practise it
+          regularly.
         </p>
       </div>
     </section>
@@ -270,7 +364,7 @@
 
   <footer class="footer">
     <p class="footer__cta">
-      Open to junior frontend roles &mdash;
+      Open to frontend roles &mdash;
       <a href="mailto:abroranvarov2@gmail.com">abroranvarov2@gmail.com</a>
     </p>
     <p class="footer__meta">
