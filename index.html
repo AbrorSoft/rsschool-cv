@@ -147,77 +147,20 @@
     <section class="section" id="code">
       <div class="section__head">
         <span class="section__num" aria-hidden="true">03</span>
-        <h2 class="section__title">Code examples</h2>
+        <h2 class="section__title">Code example</h2>
       </div>
       <div class="section__body">
         <p class="section__note">
-          1 &mdash; Typeahead search stream: cancel stale requests, ignore duplicate input, never break
-          the stream on a failed request.
+          Codewars kata &mdash; <strong>Remove String Spaces</strong>: strip every space from a string.
         </p>
         <figure class="code">
           <figcaption class="code__bar">
             <span class="code__dot" aria-hidden="true"></span>
-            <span class="code__file">client-search.service.ts</span>
+            <span class="code__file">no-space.js</span>
           </figcaption>
-          <pre class="code__body"><code><span class="c-kw">import</span> { <span class="c-ty">Injectable</span>, <span class="c-fn">inject</span> } <span class="c-kw">from</span> <span class="c-st">'@angular/core'</span>;
-<span class="c-kw">import</span> { <span class="c-ty">HttpClient</span> } <span class="c-kw">from</span> <span class="c-st">'@angular/common/http'</span>;
-<span class="c-kw">import</span> { <span class="c-ty">Observable</span>, <span class="c-fn">of</span> } <span class="c-kw">from</span> <span class="c-st">'rxjs'</span>;
-<span class="c-kw">import</span> { <span class="c-fn">catchError</span>, <span class="c-fn">debounceTime</span>, <span class="c-fn">distinctUntilChanged</span>,
-         <span class="c-fn">map</span>, <span class="c-fn">switchMap</span> } <span class="c-kw">from</span> <span class="c-st">'rxjs/operators'</span>;
-
-<span class="c-kw">export interface</span> <span class="c-ty">Client</span> { <span class="c-va">id</span>: <span class="c-ty">number</span>; <span class="c-va">name</span>: <span class="c-ty">string</span>; <span class="c-va">inn</span>: <span class="c-ty">string</span>; }
-
-<span class="c-fn">@Injectable</span>({ <span class="c-va">providedIn</span>: <span class="c-st">'root'</span> })
-<span class="c-kw">export class</span> <span class="c-ty">ClientSearchService</span> {
-  <span class="c-kw">private readonly</span> <span class="c-va">http</span> <span class="c-op">=</span> <span class="c-fn">inject</span>(<span class="c-ty">HttpClient</span>);
-
-  <span class="c-cm">/** Emits a fresh result list for every meaningful keystroke. */</span>
-  <span class="c-fn">search</span>(<span class="c-va">term$</span>: <span class="c-ty">Observable</span>&lt;<span class="c-ty">string</span>&gt;): <span class="c-ty">Observable</span>&lt;<span class="c-ty">Client</span>[]&gt; {
-    <span class="c-kw">return</span> <span class="c-va">term$</span>.<span class="c-fn">pipe</span>(
-      <span class="c-fn">map</span>((<span class="c-va">term</span>) <span class="c-op">=&gt;</span> <span class="c-va">term</span>.<span class="c-fn">trim</span>()),
-      <span class="c-fn">debounceTime</span>(<span class="c-ty">300</span>),
-      <span class="c-fn">distinctUntilChanged</span>(),
-      <span class="c-fn">switchMap</span>((<span class="c-va">term</span>) <span class="c-op">=&gt;</span>
-        <span class="c-va">term</span>.<span class="c-va">length</span> <span class="c-op">&lt;</span> <span class="c-ty">2</span>
-          <span class="c-op">?</span> <span class="c-fn">of</span>([])
-          <span class="c-op">:</span> <span class="c-kw">this</span>.<span class="c-va">http</span>
-              .<span class="c-fn">get</span>&lt;<span class="c-ty">Client</span>[]&gt;(<span class="c-st">'/api/clients'</span>, { <span class="c-va">params</span>: { <span class="c-va">q</span>: <span class="c-va">term</span> } })
-              .<span class="c-fn">pipe</span>(<span class="c-fn">catchError</span>(() <span class="c-op">=&gt;</span> <span class="c-fn">of</span>([]))),
-      ),
-    );
-  }
+          <pre class="code__body"><code><span class="c-kw">function</span> <span class="c-fn">noSpace</span>(<span class="c-va">x</span>){
+    <span class="c-kw">return</span>   <span class="c-va">x</span>.<span class="c-fn">replaceAll</span>(<span class="c-st">' '</span>, <span class="c-st">''</span>)
 }</code></pre>
-        </figure>
-
-        <p class="section__note">
-          2 &mdash; Grouping helper used in reports: pure, typed, and it never mutates the source array.
-        </p>
-        <figure class="code">
-          <figcaption class="code__bar">
-            <span class="code__dot" aria-hidden="true"></span>
-            <span class="code__file">group-by.ts</span>
-          </figcaption>
-          <pre class="code__body"><code><span class="c-cm">// Groups items by the key returned from `selector`.</span>
-<span class="c-cm">// Returns a new Map — the source array is never touched.</span>
-<span class="c-kw">export const</span> <span class="c-fn">groupBy</span> <span class="c-op">=</span> &lt;<span class="c-ty">T</span>, <span class="c-ty">K</span>&gt;(
-  <span class="c-va">items</span>: <span class="c-kw">readonly</span> <span class="c-ty">T</span>[],
-  <span class="c-va">selector</span>: (<span class="c-va">item</span>: <span class="c-ty">T</span>) <span class="c-op">=&gt;</span> <span class="c-ty">K</span>,
-): <span class="c-ty">Map</span>&lt;<span class="c-ty">K</span>, <span class="c-ty">T</span>[]&gt; <span class="c-op">=&gt;</span>
-  <span class="c-va">items</span>.<span class="c-fn">reduce</span>((<span class="c-va">groups</span>, <span class="c-va">item</span>) <span class="c-op">=&gt;</span> {
-    <span class="c-kw">const</span> <span class="c-va">key</span> <span class="c-op">=</span> <span class="c-fn">selector</span>(<span class="c-va">item</span>);
-    <span class="c-kw">const</span> <span class="c-va">bucket</span> <span class="c-op">=</span> <span class="c-va">groups</span>.<span class="c-fn">get</span>(<span class="c-va">key</span>) <span class="c-op">??</span> [];
-
-    <span class="c-kw">return</span> <span class="c-va">groups</span>.<span class="c-fn">set</span>(<span class="c-va">key</span>, [...<span class="c-va">bucket</span>, <span class="c-va">item</span>]);
-  }, <span class="c-kw">new</span> <span class="c-ty">Map</span>&lt;<span class="c-ty">K</span>, <span class="c-ty">T</span>[]&gt;());
-
-<span class="c-kw">const</span> <span class="c-va">payments</span> <span class="c-op">=</span> [
-  { <span class="c-va">id</span>: <span class="c-ty">1</span>, <span class="c-va">bank</span>: <span class="c-st">'SQB'</span>, <span class="c-va">status</span>: <span class="c-st">'paid'</span> },
-  { <span class="c-va">id</span>: <span class="c-ty">2</span>, <span class="c-va">bank</span>: <span class="c-st">'Hayot Bank'</span>, <span class="c-va">status</span>: <span class="c-st">'pending'</span> },
-  { <span class="c-va">id</span>: <span class="c-ty">3</span>, <span class="c-va">bank</span>: <span class="c-st">'SQB'</span>, <span class="c-va">status</span>: <span class="c-st">'pending'</span> },
-];
-
-<span class="c-fn">groupBy</span>(<span class="c-va">payments</span>, (<span class="c-va">payment</span>) <span class="c-op">=&gt;</span> <span class="c-va">payment</span>.<span class="c-va">bank</span>);
-<span class="c-cm">// Map(2) { 'SQB' =&gt; [ … 2 items ], 'Hayot Bank' =&gt; [ … 1 item ] }</span></code></pre>
         </figure>
       </div>
     </section>
