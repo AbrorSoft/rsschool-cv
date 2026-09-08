@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Abror Anvarov — Frontend Developer | CV</title>
+  <meta name="description" content="Curriculum vitae of Abror Anvarov, frontend developer specialising in HTML, CSS, JavaScript and Angular. Skills, projects, education and contacts.">
+  <meta name="author" content="Abror Anvarov">
+  <meta name="theme-color" content="#0d0f0e">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="hero" id="top">
+    <p class="hero__eyebrow" style="--i:1">Curriculum vitae <span class="sep">/</span> updated 2026</p>
+
+    <h1 class="hero__name">
+      <span class="hero__line" style="--i:2">Abror</span>
+      <span class="hero__line hero__line--alt" style="--i:3">Anvarov</span>
+    </h1>
+
+    <p class="hero__role" style="--i:4">
+      Frontend developer <span class="bullet" aria-hidden="true"></span>
+      HTML <span class="bullet" aria-hidden="true"></span> CSS <span class="bullet" aria-hidden="true"></span> JavaScript
+      <span class="bullet" aria-hidden="true"></span> Angular
+    </p>
+
+    <address class="hero__contacts" style="--i:5">
+      <ul class="contacts">
+        <li><span class="contacts__key">Email</span>
+          <a href="mailto:abroranvarov2@gmail.com">abroranvarov2@gmail.com</a></li>
+        <li><span class="contacts__key">Phone</span>
+          <a href="tel:+998332710101">+998 33 271 01 01</a></li>
+        <li><span class="contacts__key">GitHub</span>
+          <a href="https://github.com/AbrorSoft" target="_blank" rel="noopener noreferrer">github.com/AbrorSoft</a></li>
+        <li><span class="contacts__key">Telegram</span>
+          <a href="https://t.me/AbrorSoft" target="_blank" rel="noopener noreferrer">@AbrorSoft</a></li>
+        <li><span class="contacts__key">Location</span>
+          <span>Tashkent, Uzbekistan</span></li>
+      </ul>
+    </address>
+
+    <nav class="hero__nav" aria-label="Sections" style="--i:6">
+      <a href="#about">01 About</a>
+      <a href="#skills">02 Skills</a>
+      <a href="#code">03 Code</a>
+      <a href="#experience">04 Experience</a>
+      <a href="#education">05 Education</a>
+      <a href="#languages">06 Languages</a>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <section class="section" id="about">
+      <div class="section__head">
+        <span class="section__num" aria-hidden="true">01</span>
+        <h2 class="section__title">About me</h2>
+      </div>
+      <div class="section__body">
+        <p class="lede">
+          I build interfaces that stay fast, readable and accessible after the first release.
+        </p>
+        <p>
+          Self-taught developer with a mobile background who moved into the web. I care about semantic
+          markup, predictable CSS architecture and small, well-named functions. Comfortable reading other
+          people&rsquo;s code, splitting a design into components and shipping incrementally with Git.
+        </p>
+        <p>
+          Currently studying frontend engineering at RS School, practising vanilla JavaScript and Angular
+          on real tasks, and looking for a junior frontend position in a team where code review is a habit.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="section__head">
+        <span class="section__num" aria-hidden="true">02</span>
+        <h2 class="section__title">Skills</h2>
+      </div>
+      <div class="section__body">
+        <div class="skills">
+          <div class="skills__group">
+            <h3 class="skills__label">Core</h3>
+            <ul class="tags">
+              <li>HTML5 &amp; semantics</li>
+              <li>CSS3</li>
+              <li>Flexbox</li>
+              <li>CSS Grid</li>
+              <li>Responsive &amp; mobile-first</li>
+              <li>BEM</li>
+              <li>JavaScript (ES6+)</li>
+              <li>TypeScript</li>
+              <li>DOM &amp; events</li>
+            </ul>
+          </div>
+          <div class="skills__group">
+            <h3 class="skills__label">Frameworks &amp; libraries</h3>
+            <ul class="tags">
+              <li>Angular</li>
+              <li>RxJS</li>
+              <li>Sass / SCSS</li>
+              <li>REST API</li>
+            </ul>
+          </div>
+          <div class="skills__group">
+            <h3 class="skills__label">Tools</h3>
+            <ul class="tags">
+              <li>Git &amp; GitHub</li>
+              <li>GitHub Pages</li>
+              <li>VS Code</li>
+              <li>Chrome DevTools</li>
+              <li>Figma</li>
+              <li>npm</li>
+              <li>Vite</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="code">
+      <div class="section__head">
+        <span class="section__num" aria-hidden="true">03</span>
+        <h2 class="section__title">Code example</h2>
+      </div>
+      <div class="section__body">
+        <p class="section__note">
+          Task: group a flat list of items by a computed key without mutating the input.
+        </p>
+        <figure class="code">
+          <figcaption class="code__bar">
+            <span class="code__dot" aria-hidden="true"></span>
+            <span class="code__file">group-by.js</span>
+          </figcaption>
+
+          <pre class="code__body"><code><span class="c-cm">// Groups items by the key returned from `selector`.</span>
+<span class="c-cm">// Returns a new Map — the source array is never touched.</span>
+<span class="c-kw">export const</span> <span class="c-fn">groupBy</span> <span class="c-op">=</span> (<span class="c-va">items</span>, <span class="c-va">selector</span>) <span class="c-op">=&gt;</span>
+  <span class="c-va">items</span>.<span class="c-fn">reduce</span>((<span class="c-va">groups</span>, <span class="c-va">item</span>) <span class="c-op">=&gt;</span> {
+    <span class="c-kw">const</span> <span class="c-va">key</span> <span class="c-op">=</span> <span class="c-fn">selector</span>(<span class="c-va">item</span>);
+    <span class="c-kw">const</span> <span class="c-va">bucket</span> <span class="c-op">=</span> <span class="c-va">groups</span>.<span class="c-fn">get</span>(<span class="c-va">key</span>) <span class="c-op">??</span> [];
+
+    <span class="c-kw">return</span> <span class="c-va">groups</span>.<span class="c-fn">set</span>(<span class="c-va">key</span>, [...<span class="c-va">bucket</span>, <span class="c-va">item</span>]);
+  }, <span class="c-kw">new</span> <span class="c-ty">Map</span>());
+
+<span class="c-kw">const</span> <span class="c-va">tasks</span> <span class="c-op">=</span> [
+  { <span class="c-va">title</span>: <span class="c-st">'CV markup'</span>, <span class="c-va">status</span>: <span class="c-st">'done'</span> },
+  { <span class="c-va">title</span>: <span class="c-st">'Responsive pass'</span>, <span class="c-va">status</span>: <span class="c-st">'done'</span> },
+  { <span class="c-va">title</span>: <span class="c-st">'Deploy to Pages'</span>, <span class="c-va">status</span>: <span class="c-st">'todo'</span> },
+];
+
+<span class="c-fn">groupBy</span>(<span class="c-va">tasks</span>, (<span class="c-va">task</span>) <span class="c-op">=&gt;</span> <span class="c-va">task</span>.<span class="c-va">status</span>);
+<span class="c-cm">// Map(2) { 'done' =&gt; [ … 2 items ], 'todo' =&gt; [ … 1 item ] }</span></code></pre>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="section__head">
+        <span class="section__num" aria-hidden="true">04</span>
+        <h2 class="section__title">Experience</h2>
+      </div>
+      <div class="section__body">
+        <ol class="timeline">
+          <li class="entry">
+            <p class="entry__meta"><time datetime="2025">2025</time> &ndash; present</p>
+            <div class="entry__main">
+              <h3 class="entry__title">Freelance frontend developer</h3>
+              <p class="entry__org">Self-employed <span class="sep">/</span> remote</p>
+              <ul class="entry__points">
+                <li>Built responsive landing pages and small dashboards from Figma files, mobile-first, no layout regressions below 320&nbsp;px.</li>
+                <li>Wired UI to REST endpoints with <code>fetch</code>, handling loading, empty and error states explicitly.</li>
+                <li>Cut repeat CSS by moving colours, spacing and type scale into custom properties.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="entry">
+            <p class="entry__meta"><time datetime="2024">2024</time></p>
+            <div class="entry__main">
+              <h3 class="entry__title">Selected projects</h3>
+              <p class="entry__org">Open source <span class="sep">/</span> study work</p>
+              <ul class="entry__points">
+                <li><strong>rsschool-cv</strong> — this page: hand-written semantic HTML and CSS, published on GitHub Pages.</li>
+                <li><strong>Task tracker</strong> — vanilla JS SPA with drag &amp; drop, filters and <code>localStorage</code> persistence.</li>
+                <li><strong>Weather widget</strong> — Angular component consuming a public API, with caching and unit tests.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="education">
+      <div class="section__head">
+        <span class="section__num" aria-hidden="true">05</span>
+        <h2 class="section__title">Education</h2>
+      </div>
+      <div class="section__body">
+        <ol class="timeline">
+          <li class="entry">
+            <p class="entry__meta"><time datetime="2025">2025</time> &ndash; present</p>
+            <div class="entry__main">
+              <h3 class="entry__title">RS School — JavaScript / Frontend</h3>
+              <p class="entry__org">The Rolling Scopes <span class="sep">/</span> online</p>
+              <ul class="entry__points">
+                <li>Layout, JavaScript fundamentals, Git workflow, code review and cross-check culture.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="entry">
+            <p class="entry__meta"><time datetime="2021">2021</time> &ndash; 2025</p>
+            <div class="entry__main">
+              <h3 class="entry__title">Bachelor&rsquo;s degree, Information Technologies</h3>
+              <p class="entry__org">Tashkent, Uzbekistan</p>
+              <ul class="entry__points">
+                <li>Algorithms, databases, software engineering foundations.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="entry">
+            <p class="entry__meta">Self-study</p>
+            <div class="entry__main">
+              <h3 class="entry__title">Courses &amp; practice</h3>
+              <p class="entry__org">MDN <span class="sep">/</span> freeCodeCamp <span class="sep">/</span> Codewars</p>
+              <ul class="entry__points">
+                <li>Daily algorithm practice and reading specs instead of only tutorials.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="languages">
+      <div class="section__head">
+        <span class="section__num" aria-hidden="true">06</span>
+        <h2 class="section__title">Languages</h2>
+      </div>
+      <div class="section__body">
+        <ul class="langs">
+          <li class="lang">
+            <span class="lang__name">Uzbek</span>
+            <span class="lang__level">Native</span>
+          </li>
+          <li class="lang">
+            <span class="lang__name">Russian</span>
+            <span class="lang__level">C1 &middot; Fluent</span>
+          </li>
+          <li class="lang">
+            <span class="lang__name">English</span>
+            <span class="lang__level">B1 &middot; Intermediate</span>
+          </li>
+        </ul>
+        <p class="section__note">
+          English is good enough to read documentation, follow code review in writing and take part in
+          stand-ups; speaking practice is ongoing.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p class="footer__cta">
+      Open to junior frontend roles &mdash;
+      <a href="mailto:abroranvarov2@gmail.com">abroranvarov2@gmail.com</a>
+    </p>
+    <p class="footer__meta">
+      <span>Abror Anvarov &middot; 2026</span>
+      <a class="footer__top" href="#top">Back to top &uarr;</a>
+    </p>
+  </footer>
+</body>
+</html>
